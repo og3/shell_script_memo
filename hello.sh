@@ -1,12 +1,9 @@
 #!/bin/bash
-# if
 
-read -p "Name? " name
+read -p "word? :" word
 
-if [ "$name" = "if" ]; then
-  echo "welcomem, if"
-elif [ "$name" = "elif" ]; then
-  echo "welcome, elif"
+if [[ $word =~ ^t ]]; then
+  echo "tから始まる"
 else
-  echo "you are not allowed"
+  echo "tから始まらない"
 fi
