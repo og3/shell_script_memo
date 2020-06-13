@@ -1,4 +1,5 @@
 #! /bin/bash
 
-read -p "名前：" name
-echo "こんにちは、$nameさん"
+n=7
+echo $((6 + 7))
+echo $((n + 10))
