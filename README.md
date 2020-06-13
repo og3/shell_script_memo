@@ -19,10 +19,25 @@ colors[1]=silver
 colors+=(green orange)  
 
 ## 数値の計算
+```
 n=7  
 echo $((6 + 7))  
 echo $((n + 10))  
+```
 少数の演算はできない。  
+
+## if
+```
+read -p "Name? " name
+
+if [ "$name" = "if" ]; then
+  echo "welcomem, if"
+elif [ "$name" = "elif" ]; then
+  echo "welcome, elif"
+else
+  echo "you are not allowed"
+fi
+```
 
 # 文法
 ## 一行で書く場合

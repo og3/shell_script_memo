@@ -1,5 +1,12 @@
-#! /bin/bash
+#!/bin/bash
+# if
 
-n=7
-echo $((6 + 7))
-echo $((n + 10))
+read -p "Name? " name
+
+if [ "$name" = "if" ]; then
+  echo "welcomem, if"
+elif [ "$name" = "elif" ]; then
+  echo "welcome, elif"
+else
+  echo "you are not allowed"
+fi
