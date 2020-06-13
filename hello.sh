@@ -1,5 +1,4 @@
 #! /bin/bash
 
-echo hello
-
-echo hello; echo world
+read -p "名前：" name
+echo "こんにちは、$nameさん"
