@@ -60,6 +60,43 @@ for item in $(date); do
 done
 ```
 
+## while
+```
+# nul colon いつでも条件が成立する
+while :
+do
+  read -p "Command? " cmd
+  if [[ $cmd == "quit" ]]; then
+    break
+  else
+    echo "$cmd"
+  fi
+done
+
+i=0
+while ((i < 10)); do
+  ((i++))
+  echo $i
+done
+```
+
+## case
+```
+read -p "Signal color? " color
+case "$color" in
+  red)
+    echo "stop"
+    ;;
+  blue|green)
+    echo "go"
+    ;;
+  yellow)
+    echo "caution"
+    ;;
+  *)
+    echo "wrong signal"
+esac
+```
 
 # 文法
 ## 一行で書く場合
@@ -117,5 +154,15 @@ fi
 if [[ -d $0 ]]; then
  echo "dir exists ..."
 fi
+```
+
+## ファイルを読み込んで処理をする
+colors.txtから一行ずつ読み込んで、行番号をつけて出力する
+```
+i=1
+while read line; do
+  echo $i "$line"
+  ((i++))
+done < colors.txt
 ```
 
