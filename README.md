@@ -98,6 +98,26 @@ case "$color" in
 esac
 ```
 
+## select
+```
+select color in red blue yellow green; do
+  case "$color" in
+    red)
+      echo "stop"
+      ;;
+    blue|green)
+      echo "go"
+      ;;
+    yellow)
+      echo "caution"
+      ;;
+    *)
+      echo "wrong signal"
+      break
+  esac
+done
+```
+
 # 文法
 ## 一行で書く場合
 各行を;でつなぐ。  
