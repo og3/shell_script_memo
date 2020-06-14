@@ -118,6 +118,21 @@ select color in red blue yellow green; do
 done
 ```
 
+## 関数
+返り値は最後に実行した値
+```
+hello() {
+  if [[ $1 == "taguchi" ]]; then
+    return 0
+  else
+    return 1
+  fi
+}
+
+hello taguchi; echo $? # 0
+hello fkoji; echo $? # 1
+```
+
 # 文法
 ## 一行で書く場合
 各行を;でつなぐ。  
